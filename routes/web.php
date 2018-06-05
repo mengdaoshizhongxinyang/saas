@@ -41,3 +41,9 @@ Route::post('api/upload/add', 'UploadController@add');
 Route::post('api/systemnotice/add', 'SystemnoticeController@add');
 Route::post('api/systemnotice/{id}/update', 'SystemnoticeController@update');
 Route::get('api/systemnotice', 'SystemnoticeController@show');
+#--------------公告状态---------------
+Route::post('api/noticestate/add', 'NoticestateController@add');
+Route::post('api/noticestate/{id}/del', 'NoticestateController@del');
+Route::post('api/noticestate/{id}/update', 'NoticestateController@update');
+Route::get('api/noticestate/list/{uid}', 'NoticestateController@getListByUserId');
+Route::get('api/noticestate/{id}', 'NoticestateController@show');
