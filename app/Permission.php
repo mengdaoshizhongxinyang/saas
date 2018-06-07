@@ -1,9 +1,10 @@
+<?php
 
 
 namespace App;
 
 
-class KF_NAME extends BaseModel
+class Permission extends BaseModel
 {
 
     protected $fillable = [
@@ -12,6 +13,8 @@ class KF_NAME extends BaseModel
     protected $hidden = [
 
     ];
+
+    public $timestamps=false;
     /*
      * 外键代码示例
      public function category()

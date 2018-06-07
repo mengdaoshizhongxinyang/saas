@@ -94,7 +94,7 @@ class NoticestateController extends BaseController
     {
 
         $r = $this->Obj
-            ->where('notice_id','=',$uid)
+            ->where('user_id','=',$uid)
             ->with('systemnotice')
             ->orderBy('id', 'desc')
             ->paginate();

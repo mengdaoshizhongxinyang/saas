@@ -1,17 +1,20 @@
+<?php
 
 
 namespace App;
 
 
-class KF_NAME extends BaseModel
+class RolePermission extends BaseModel
 {
 
     protected $fillable = [
-
+        'role_id',''
     ];
     protected $hidden = [
 
     ];
+    public $timestamps=false;
+
     /*
      * 外键代码示例
      public function category()

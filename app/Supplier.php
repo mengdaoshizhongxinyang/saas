@@ -1,9 +1,10 @@
+<?php
 
 
 namespace App;
 
 
-class KF_NAME extends BaseModel
+class Supplier extends BaseModel
 {
 
     protected $fillable = [

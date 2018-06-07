@@ -4,12 +4,11 @@
 namespace App;
 
 
-class Upload extends BaseModel
+class Role extends BaseModel
 {
-    protected $table = 'upload';
 
     protected $fillable = [
-
+        'store_id','name'
     ];
     protected $hidden = [
 

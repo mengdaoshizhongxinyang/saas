@@ -1,12 +1,13 @@
+<?php
 
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\KF_NAME;
+use App\Permission;
 
 
-class KF_NAMEController extends BaseController
+class PermissionController extends BaseController
 {
     //默认对应的模型对象。
     public $Obj;
@@ -25,13 +26,13 @@ class KF_NAMEController extends BaseController
     ];
 
     //构造函数，默认注入控制器同名对象
-    public function __construct(KF_NAME $KF_name)
+    public function __construct(Permission $permission)
     {
-        $this->Obj = $KF_name;
+        $this->Obj = $permission;
     }
 
     /*
-     * KF_CMT添加
+     * 权限添加
      */
     public function add(Request $request)
     {
@@ -40,34 +41,34 @@ class KF_NAMEController extends BaseController
         $this->Obj->fill($data);
         $r = $this->Obj->save();
         if ($r) {
-            $this->success('KF_CMT添加成功');
+            $this->success('权限添加成功');
         } else {
-            $this->error('KF_CMT添加失败');
+            $this->error('权限添加失败');
         }
     }
 
     /*
-     * 删除指定id的KF_CMT
+     * 删除指定id的权限
      */
     public function del($id)
     {
         $delnum = $this->Obj->destroy($id);
         if ($delnum) {
-            $this->success('KF_CMT删除成功');
+            $this->success('权限删除成功');
         } else {
-            $this->error('KF_CMT删除失败');
+            $this->error('权限删除失败');
         }
 
     }
 
     /*
-     * 更新指定id的KF_CMT
+     * 更新指定id的权限
      */
     public function update(Request $request, $id)
     {
         $record = $this->Obj->find($id);
         if (!$record) {
-            $this->error('KF_CMT不存在');
+            $this->error('权限不存在');
         }
 
 
@@ -80,15 +81,15 @@ class KF_NAMEController extends BaseController
         $record->fill($data);
         $r = $record->save();
         if ($r) {
-            $this->success('KF_CMT更新成功');
+            $this->success('权限更新成功');
         } else {
-            $this->error('KF_CMT更新失败');
+            $this->error('权限更新失败');
         }
     }
 
 
     /*
-     * 获取KF_CMT列表
+     * 获取权限列表
      */
     public function getListByCate($cateid = null)
     {
@@ -102,7 +103,7 @@ class KF_NAMEController extends BaseController
     }
 
     /*
-     * 查看指定id的KF_CMT
+     * 查看指定id的权限
      */
     public function show($id)
     {

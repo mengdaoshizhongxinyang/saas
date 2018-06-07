@@ -34,8 +34,7 @@ Route::post('api/industry/{id}/update', 'IndustryController@update');
 Route::get('api/industry', 'IndustryController@getList');
 Route::get('api/industry/{id}', 'IndustryController@show');
 
-Route::post('api/upload/add', 'UploadController@add');
-//Route::post('api/industry/{id}/update', 'IndustryController@update');
+
 
 
 Route::post('api/systemnotice/add', 'SystemnoticeController@add');
@@ -47,3 +46,33 @@ Route::post('api/noticestate/{id}/del', 'NoticestateController@del');
 Route::post('api/noticestate/{id}/update', 'NoticestateController@update');
 Route::get('api/noticestate/list/{uid}', 'NoticestateController@getListByUserId');
 Route::get('api/noticestate/{id}', 'NoticestateController@show');
+#--------------员工---------------
+Route::post('api/staff/add', 'StaffController@add');
+Route::post('api/staff/{id}/del', 'StaffController@del');
+Route::post('api/staff/{id}/update', 'StaffController@update');
+Route::get('api/staff/list', 'StaffController@getList');
+Route::get('api/staff/{id}', 'StaffController@show');
+#--------------角色---------------
+Route::post('api/role/add', 'RoleController@add');
+Route::post('api/role/{id}/del', 'RoleController@del');
+Route::post('api/role/{id}/update', 'RoleController@update');
+Route::get('api/role/list', 'RoleController@getList');
+Route::get('api/role/{id}', 'RoleController@show');
+#--------------角色权限---------------
+Route::post('api/rolePermission/add', 'RolePermissionController@add');
+Route::post('api/rolePermission/{id}/del', 'RolePermissionController@del');
+Route::post('api/rolePermission/{id}/update', 'RolePermissionController@update');
+Route::get('api/rolePermission/list', 'RolePermissionController@getList');
+Route::get('api/rolePermission/{id}', 'RolePermissionController@show');
+#--------------权限管理---------------
+Route::post('api/permission/add', 'PermissionController@add');
+Route::post('api/permission/{id}/del', 'PermissionController@del');
+Route::post('api/permission/{id}/update', 'PermissionController@update');
+Route::get('api/permission/list', 'PermissionController@getList');
+Route::get('api/permission/{id}', 'PermissionController@show');
+#--------------供应商路由---------------
+Route::post('api/supplier/add', 'SupplierController@add');
+Route::post('api/supplier/{id}/del', 'SupplierController@del');
+Route::post('api/supplier/{id}/update', 'SupplierController@update');
+Route::get('api/supplier/list', 'SupplierController@getList');
+Route::get('api/supplier/{id}', 'SupplierController@show');
